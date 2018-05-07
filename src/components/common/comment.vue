@@ -15,7 +15,7 @@
               {{v.user_name}}
             </span>
           </p>
-          <img src="../../assets/images/menu2.png" class="mui-media-object mui-pull-right">
+          <img src="../../assets/images/menu1.png" class="mui-media-object mui-pull-right">
           <div class="mui-media-body">
             <p class="mui-ellipsis comment-content" v-text="v.content"></p>
           </div>
