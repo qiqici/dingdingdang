@@ -6,7 +6,7 @@
        </div>
        <div class="news-content"></div>
        <p class="news-info">
-         <span>发表时间:{{newsInfo.add_time}}</span>
+         <span>发表时间:{{newsInfo.add_time|dataformat("YYYY年MM月DD日 HH:mm:ss")}}</span>
          <span class="mui-pull-right">点击:{{newsInfo.click}}次</span>
        </p>
        <hr>
@@ -19,6 +19,8 @@
 
 <script>
 import axios from "axios"
+import dateformat from "@/filters/dateformat"
+
 export default {
   data(){
     return{
@@ -33,6 +35,9 @@ export default {
         this.newsInfo=res.data.message[0]
       }
     })
+  },
+  filters:{
+    dateformat
   }
 }
 </script>
