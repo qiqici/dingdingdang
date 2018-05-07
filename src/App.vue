@@ -3,7 +3,8 @@
 
     <mt-header fixed title="叮叮当购物商城"></mt-header>
 
-    
+    <router-view/>
+		
     <nav class="mui-bar mui-bar-tab">
 			<router-link id="defaultTab" class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
