@@ -6,20 +6,24 @@
        </div>
        <div class="news-content"></div>
        <p class="news-info">
-         <span>发表时间:{{newsInfo.add_time|dataformat("YYYY年MM月DD日 HH:mm:ss")}}</span>
+         <span>发表时间:{{newsInfo.add_time|dateformat("YYYY年MM月DD日 HH:mm:ss")}}</span>
          <span class="mui-pull-right">点击:{{newsInfo.click}}次</span>
        </p>
        <hr>
      </div>
-     <div class="news-comment" v-html="newsInfo.content">
+     <div class="news-content" v-html="newsInfo.content">
        
      </div>
+    <div class="news-comment">
+      <comment :id="$route.params.id"></comment>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios"
 import dateformat from "@/filters/dateformat"
+import comment from "../common/comment"
 
 export default {
   data(){
@@ -38,6 +42,9 @@ export default {
   },
   filters:{
     dateformat
+  },
+  components:{
+    comment
   }
 }
 </script>
@@ -49,5 +56,8 @@ export default {
 }
 .news img{
   width:100%;
+}
+.news-comment{
+  margin-bottom: 10px;
 }
 </style>
