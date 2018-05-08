@@ -1,12 +1,15 @@
 <template>
   <div class="page">
-      <h1>新闻列表页</h1>
+      <comment :id="$route.params.id"></comment>
   </div>
 </template>
 
 <script>
+import comment from "../common/comment"
 export default {
-  
+  components:{
+    comment
+  }
 }
 </script>
 

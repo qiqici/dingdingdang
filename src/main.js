@@ -20,12 +20,14 @@ import VuePreview from 'vue-preview'
 // defalut install
 Vue.use(VuePreview)
 
+import store from "./store"
+
 
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  render:h=>h(App),
+  store
 })
