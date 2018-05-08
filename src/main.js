@@ -15,6 +15,11 @@ import "./assets/mui/css/mui.css"
 
 import "./assets/mui/css/icons-extra.css"
 
+import VuePreview from 'vue-preview'
+
+// defalut install
+Vue.use(VuePreview)
+
 
 
 /* eslint-disable no-new */

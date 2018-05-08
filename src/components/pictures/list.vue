@@ -15,7 +15,7 @@
 			</div>
 
       <ul>
-        <li v-for="(v,i) in picList" :key="i">
+        <li v-for="(v,i) in picList" :key="i" @click="$router.push('/pics/detail/'+v.id)">
           <img v-lazy="v.img_url" alt="">
           <div class="info">
             <h4>{{v.title}}</h4>
